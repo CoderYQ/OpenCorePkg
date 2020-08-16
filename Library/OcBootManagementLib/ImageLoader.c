@@ -180,14 +180,14 @@ InternalEfiLoadImage (
     Status = InternalEfiLoadImageFile (
       DevicePath,
       &SourceSize,
-      SourceBuffer
+      &SourceBuffer
       );
     if (EFI_ERROR (Status)) {
       Status = InternalEfiLoadImageProtocol (
         DevicePath,
         BootPolicy == FALSE,
         &SourceSize,
-        SourceBuffer
+        &SourceBuffer
         );
     }
 
